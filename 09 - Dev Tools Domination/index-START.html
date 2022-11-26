@@ -9,38 +9,57 @@
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
   <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const laptops = [{ Brand: 'Acer', name: 'Acer Predator Helios 300', Price: 1700 }, 
+                  { Brand: 'Asus', name: 'Asus ROG Scar 17', Price: 4500},
+                  { Brand: 'Dell', name: 'Alienware x17 R2', Price: 5000},
+                  {Brand: 'HP', name: 'HP Omen 16', Price: 2700},
+                {Brand: 'Lenovo', name: 'Lenovo Legion 7i', Price: 4600},
+              {Brand: 'MSI', name: 'MSI Titan GT77', Price: 6000}];
 
     function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
+      const list = document.queryselector('p');
+      list.style.color = '#BADA55';
+      list.style.fontSize = '50px';
     }
 
     // Regular
-
+    console.log('Testing')
     // Interpolated
-
+    console.log(`This is a selector for %s string type`)
     // Styled
+    console.log(`data test ,font-family:Verdana; font-size:25px`)
 
     // warning!
+    console.warn(`Warning, don't try to open `)
 
     // Error :|
-
+    console.log('oh sh***t')
     // Info
-
+    console.info(`All laptops ae in top configuration`)
     // Testing
-
+    const list = document.querySelector('p')
+    console.assert(`${list.classList.contains('ow')}, This is wrong`)
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    console.log(list)
+    console.dir(list)
+    console.clear()
 
     // Grouping together
+    laptops.forEach(a =>{
+      console.group(`${laptops.name}`)
+      console.log(`The laptop name is ${laptops.name} from ${laptops.Brand} with the cost of ${laptops.Price}`)
+    })
 
     // counting
-
+    console.count('Alpha')
+    console.count('Bravo')
+    console.count('Charlie')
+    console.count('Delta')
     // timing
-
+    console.time('Data Processing')
   </script>
 </body>
 </html>

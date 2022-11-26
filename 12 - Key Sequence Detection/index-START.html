@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Key Detection</title>
+  <title>Konami Code from Key Detection</title>
   <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
 </head>
 <body>
-<script>
-</script>
+  <script>
+  const press = []
+  const pass = 'Javascript'
+  window.addEventListener('keyup', (a) => {
+    console.log(a.key);
+    press.push(a.key);
+    press.splice(-pass.length -1, press.length - pass.length);
+    if (press.join('').includes(pass)){
+      console.log('Activated')
+      cornify_add()
+    } 
+  })
+  </script>
 </body>
 </html>
